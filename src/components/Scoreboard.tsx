@@ -14,7 +14,7 @@ export default function Scoreboard({ players }: Props) {
 
   return (
     <div className="w-full max-w-2xl">
-      <h3 className="text-lg font-semibold text-center mb-3">Current Scores</h3>
+      <h3 className="text-lg font-semibold text-center mb-3">Zwischenstand</h3>
       <div className="grid gap-2">
         {sortedPlayers.map((p, index) => {
           const total = p.scores.reduce((a, b) => a + b, 0);

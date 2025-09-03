@@ -41,10 +41,10 @@ export default function BettingPhase({
     <div className="w-full max-w-2xl">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold">
-          Round {round}/{maxRounds} – {cards} cards
+          Runde {round}/{maxRounds} – {cards} Karten
         </h2>
         <div className="text-right">
-          <div className="text-sm text-gray-600">Total Bets</div>
+          <div className="text-sm text-gray-600">Anzahl der Stiche</div>
           <div className="text-lg font-bold">
             {totalBets}/{cards}
           </div>
@@ -58,11 +58,10 @@ export default function BettingPhase({
           return (
             <div
               key={p.id}
-              className={`flex justify-between items-center p-3 rounded-lg border ${
-                isDealer && dealerInvalid
+              className={`flex justify-between items-center p-3 rounded-lg border ${isDealer && dealerInvalid
                   ? "bg-red-200 border-red-400"
                   : "border-gray-300 bg-white"
-              }`}
+                }`}
             >
               <span className="font-medium">
                 {p.name || `Player ${p.id + 1}`}
@@ -97,13 +96,12 @@ export default function BettingPhase({
       <button
         disabled={dealerInvalid}
         onClick={() => setPhase("results")}
-        className={`mt-6 w-full px-6 py-3 rounded-xl shadow ${
-          dealerInvalid
+        className={`mt-6 w-full px-6 py-3 rounded-xl shadow ${dealerInvalid
             ? "bg-gray-400 text-white cursor-not-allowed"
             : "bg-blue-600 text-white"
-        }`}
+          }`}
       >
-        Place Bets
+        Stiche bestätigen!
       </button>
     </div>
   );

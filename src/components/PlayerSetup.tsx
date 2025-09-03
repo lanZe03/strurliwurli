@@ -13,7 +13,7 @@ export default function PlayerSetup({
 }: Props) {
   return (
     <div className="w-full max-w-md">
-      <h2 className="font-semibold mb-2 text-center">Enter Player Names</h2>
+      <h2 className="font-semibold mb-2 text-center">Spielernamen eingeben</h2>
       {players.map((p, i) => (
         <input
           key={p.id}
@@ -32,7 +32,7 @@ export default function PlayerSetup({
         onClick={confirmNames}
         className="w-full px-6 py-3 bg-green-600 text-white rounded-xl shadow"
       >
-        Start Betting
+        Spiel beginnen!
       </button>
     </div>
   );

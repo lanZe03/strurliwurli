@@ -134,8 +134,8 @@ function App() {
             playerName,
             message:
               i === dealerIndex
-                ? `Perfect dealer cycle as Dealer!`
-                : `Perfect dealer cycle!`,
+                ? `Perfekte Runde als Geber!`
+                : `Perfekte Runde!`,
             points: bonus,
           });
         }
@@ -199,7 +199,7 @@ function App() {
                   <div className="font-bold">{alert.playerName}</div>
                   <div className="text-sm">{alert.message}</div>
                   <div className="text-lg font-bold">
-                    +{alert.points} points!
+                    +{alert.points} Punkte!
                   </div>
                 </div>
                 <button
@@ -217,7 +217,7 @@ function App() {
       {!players.length ? (
         <div className="flex flex-col gap-2">
           <h2 className="font-semibold text-center mb-2">
-            Choose number of players:
+            Wähle die Anzahl der Spieler:
           </h2>
           {[4, 5, 6].map((n) => (
             <button
@@ -225,7 +225,7 @@ function App() {
               onClick={() => startGame(n)}
               className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow"
             >
-              {n} Players
+              {n} Spieler
             </button>
           ))}
         </div>

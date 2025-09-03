@@ -16,10 +16,10 @@ export default function FinalScoreboard({ players }: Props) {
       {/* Winner announcement */}
       <div className="text-center mb-6 p-4 bg-yellow-100 rounded-lg">
         <div className="text-xl font-bold text-yellow-800">
-          🎉 {winner?.name || `Player ${winner?.id ?? 0 + 1}`} Wins! 🎉
+          🎉 {winner?.name || `Player ${winner?.id ?? 0 + 1}`} hat Gewonnen!! 🎉
         </div>
         <div className="text-lg text-yellow-700">
-          Final Score: {maxScore} points
+          Ergebnis: {maxScore} Punkte!
         </div>
       </div>
 
@@ -29,7 +29,7 @@ export default function FinalScoreboard({ players }: Props) {
           <thead>
             <tr className="bg-gray-100">
               <th className="border border-gray-300 p-2 text-left sticky left-0 bg-gray-100">
-                Player
+                Spieler
               </th>
               {players[0]?.scores?.map((_, i) => (
                 <th key={i} className="border border-gray-300 p-2 min-w-[60px]">
@@ -37,7 +37,7 @@ export default function FinalScoreboard({ players }: Props) {
                 </th>
               ))}
               <th className="border border-gray-300 p-2 bg-yellow-50 font-bold">
-                Total
+                Summe
               </th>
             </tr>
           </thead>
@@ -79,7 +79,7 @@ export default function FinalScoreboard({ players }: Props) {
           onClick={() => window.location.reload()}
           className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700"
         >
-          Play Again
+          Nochmal spielen
         </button>
       </div>
     </div>

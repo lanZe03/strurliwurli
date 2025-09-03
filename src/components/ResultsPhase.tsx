@@ -48,31 +48,28 @@ export default function ResultsPhase({
           return (
             <div
               key={p.id}
-              className={`flex justify-between items-center p-3 rounded-lg border ${
-                isDealer ? "border-blue-500" : "border-gray-300"
-              }`}
+              className={`flex justify-between items-center p-3 rounded-lg border ${isDealer ? "border-blue-500" : "border-gray-300"
+                }`}
             >
               <span className="font-medium">
-                {p.name || `Player ${p.id + 1}`} – Bet: {bets[realIndex]}
+                {p.name || `Player ${p.id + 1}`} – Angesagte Stiche: {bets[realIndex]}
               </span>
               <div className="flex gap-2">
                 <button
                   onClick={() => setPlayerResult(realIndex, true)}
-                  className={`px-4 py-2 rounded-lg text-lg font-bold active:scale-95 ${
-                    results[realIndex] === true
-                      ? "bg-green-500 text-white"
-                      : "bg-gray-200"
-                  }`}
+                  className={`px-4 py-2 rounded-lg text-lg font-bold active:scale-95 ${results[realIndex] === true
+                    ? "bg-green-500 text-white"
+                    : "bg-gray-200"
+                    }`}
                 >
                   ✓
                 </button>
                 <button
                   onClick={() => setPlayerResult(realIndex, false)}
-                  className={`px-4 py-2 rounded-lg text-lg font-bold active:scale-95 ${
-                    results[realIndex] === false
-                      ? "bg-red-500 text-white"
-                      : "bg-gray-200"
-                  }`}
+                  className={`px-4 py-2 rounded-lg text-lg font-bold active:scale-95 ${results[realIndex] === false
+                    ? "bg-red-500 text-white"
+                    : "bg-gray-200"
+                    }`}
                 >
                   ✗
                 </button>
@@ -84,13 +81,12 @@ export default function ResultsPhase({
       <button
         onClick={confirmResults}
         disabled={!allResultsSelected}
-        className={`mt-6 w-full px-6 py-3 rounded-xl shadow ${
-          allResultsSelected
-            ? "bg-blue-600 text-white hover:bg-blue-700"
-            : "bg-gray-400 text-white cursor-not-allowed"
-        }`}
+        className={`mt-6 w-full px-6 py-3 rounded-xl shadow ${allResultsSelected
+          ? "bg-blue-600 text-white hover:bg-blue-700"
+          : "bg-gray-400 text-white cursor-not-allowed"
+          }`}
       >
-        Confirm Round
+        Nächste Runde
       </button>
     </div>
   );
